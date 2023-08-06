@@ -1,0 +1,22 @@
+# In HDFS file system '/' is the root
+
+# Command to check file inside root directory
+    hadoop fs -ls /
+
+# Command to check file inside home directory
+    hadoop fs -ls
+
+# Command to Create a Directory in HDFS
+    hadoop fs -mkdir /'filename'
+
+# Command to Copy form local to HDFS
+    hadoop fs -put 'file location' /'Destination location'
+
+# Command to Copy from HDFS to Local 
+    hadoop fs -copyToLocal /hadoop-user/trees.csv ./
+
+# Command to Copy a file from one folder to another
+    hadoop fs -cp /hadoop-user/trees.csv /hadoop-user2
+
+# Command to execute map reduce code
+    hadoop jar hadoop-streaming-2.4.0.jar -files mapper.py,reducer.py -mapper mapper.py -reducer reducer.py -input /test/demo/txt -output /output
